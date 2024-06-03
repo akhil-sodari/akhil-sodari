@@ -1,0 +1,23 @@
+ <div class="swiper-container">
+      <div class="swiper-wrapper">
+             <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="background-image" style="background-image: url('/static/images/profile_photo.png');"></div>
+        </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="background-image" style="background-image: url('/static/images/b.jpg');"></div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="background-image" style="background-image: url('/static/images/profile_photo.png');"></div>
+      </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </div>
+  

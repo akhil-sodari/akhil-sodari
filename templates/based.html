@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Title{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Other CSS files -->
+    <!-- Add your other CSS files here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='other.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <h1>{{ title }}</h1>
+        <!-- Profile and navigation links -->
+        <div class="d-flex flex-column">
+
+            <div class="profile">
+                <img src="{{ url_for('static', filename='images/profile_photo.png') }}" alt="" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="{{ url_for('index') }}">Akhil Sodari</a></h1>
+                <div class="social-links mt-3 text-center">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+                    <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                    <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+                    <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+                    <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+            </nav>
+            <!-- .nav-menu -->
+
+        </div>
+        <!-- .d-flex.flex-column -->
+    </header>
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+    <!-- Add your sidebar content here -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('education') }}">Education</a></li>
+            <li><a href="{{ url_for('skills') }}">Skills</a></li>
+            <li><a href="{{ url_for('work_experience') }}">Work Experience</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        </ul>
+    </nav>
+    <!-- End Sidebar -->
+
+    <!-- Main content -->
+    <main id="main">
+        {% block content %}{% endblock %}
+    </main>
+    <!-- End Main content -->
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact: {{ contact_info }}</p>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap JS and other scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Your custom JavaScript files -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
