@@ -1,1 +1,0 @@
-# akhil-sodari.github.io
