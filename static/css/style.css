@@ -759,7 +759,20 @@ section {
   margin-bottom: 0;
 }
 
+.achievements{
+  padding-bottom: 10px;
+}
 
+
+
+.achievements i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #149ddd;
+  line-height: 0;
+}
+
+.ach
 
 /* Contact */
 .contact {
@@ -828,6 +841,13 @@ section {
 .contact .info .social-links a:hover {
   background: #149ddd;
   color: #fff;
+}
+
+.contact i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #149ddd;
+  line-height: 0;
 }
 
 .contact .info .email:hover i,
